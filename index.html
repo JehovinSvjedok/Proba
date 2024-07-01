@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    body{
+        background-image: url(Slike/background.jpg);
+        background-size: 2200px;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .top{
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        flex-direction: row;
+        background-color: lightblue;
+    }
+    .toptekst{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        font-size: larger;
+        justify-content: right;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        margin-right: 200px;
+    }
+    .top a{
+        color: rgb(60, 8, 182);
+    }
+    .kec{
+        height: 50vh;
+        width: 60%;
+    }
+    .toplinks{
+        width: 80%;
+        height: 5vh;
+        display: flex;
+        margin-left: 200px;
+        align-items: center;
+    }
+    .toplinks img{
+        margin-left: 10px;
+    }
+    .top img{
+        width: 30px;
+        height: 30px;
+        
+    }
+    .topleft a:nth-child(2){
+        font-size: 25px;
+    }
+    .st{
+        margin-left: 10px;
+    }
+    .st1{
+        height: 5vh;
+        width: 50%;
+        object-fit: contain;
+    }
+    .st:hover{
+        color: white;
+    }
+    .dropdown{
+        margin-left: 10px;
+    }
+    select{
+        background-color: lightblue;
+        border: none;
+        font-size: 16px;
+        color:rgb(60, 8, 182) ;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+    }
+    .display{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        "sp1 sp2"
+        "sp3 sp4"
+        "sp5 sp6"
+        "sp7 sp8" ;
+        row-gap: 30px;
+        column-gap: 200px;
+    }
+    .wrapper{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        position: relative;
+        padding: 1%;
+    }
+    .wrapper img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+    }
+    .wrapper h2{
+            display: none;
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            background-color: rgba(244, 244, 244, 0.5);
+            text-align: center;
+            width: 98%;
+            margin-left: 1%;
+    }
+    .wrapper:hover h2{
+            display: block;
+    }
+    .sports1,.sports2,.sports3,.sports4,.sports5,.sports6,.sprts7,.sports8{
+        position: relative;
+        overflow: hidden;
+    }
+    .wrapper img{
+        transition: transform 0.3s;
+    }
+    .wrapper:hover img,h2 {
+        transform: scale(1.1);
+        box-shadow: 4px 4px 4px;
+    }
+    .sports1{
+        grid-area: sp1;
+    }
+    .sports2{
+        grid-area: sp2;
+    }
+    .sports3{
+        grid-area: sp3;
+    }
+    .sports4{
+        grid-area: sp4;
+    }
+    .sports5{
+        grid-area: sp5;
+    }
+    .sports6{
+        grid-area: sp6;
+    }
+    .sports7{
+        grid-area: sp7;
+    }
+    .sports8{
+        grid-area: sp8;
+    }
+    @media(max-width: 800px){
+        .display{
+            display: grid;
+            grid-template-rows: repeat(8,1fr);
+            grid-template-columns: repeat(1,1fr);
+            grid-template-areas:
+            "sp1"
+            "sp2"
+            "sp3"
+            "sp4"
+            "sp5"
+            "sp6"
+            "sp7"
+            "sp8" ;
+            margin-left: 100px;
+        }
+        .toplinks{
+            display: flex;
+            justify-content: left;
+            margin-left: 0px;
+        }
+        .toptekst{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            font-size: larger;
+            justify-content: right;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            margin-left: 150px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top">
+            <div class="toplinks">
+                <a href="" class="topleft"><img src="Slike/sports.png" alt=""></a>
+                <a href="">Sport</a>
+            </div>
+            <div class="toptekst">
+                <a class="st" href=""><img class="st1" src="Slike/search.jpg" alt=""></a>
+                <a class="st" href="stud.html" target="_blank">Kontakt</a> 
+                <a class="st" href="">O nama</a>
+                <div class="dropdown">
+                    <label for="jezik">
+                        <select name="jezik" id="jezik">
+                            <option value="Hrvatski">Hrvatski</option>
+                            <option value="Engleski">Engleski</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="display">
+            <div class="wrapper">
+                <a href="" class="sports1"><img src="Slike/football.jpg" alt=""></a>
+                <h2>Football</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports2"><img src="Slike/basketball.jpeg" alt=""></a>
+                <h2>Basketball</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports3"><img src="Slike/tenis.jpg" alt=""></a>
+                <h2>Tenis</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports4"><img src="Slike/swimming.jpg" alt=""></a>
+                <h2>Swimming</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports5"><img src="Slike/golf.png" alt=""></a>
+                <h2>Golf</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports6"><img src="Slike/cricket.jpg" alt=""></a>
+                <h2>Cricket</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports7"><img src="Slike/boseball.jpg" alt=""></a>
+                <h2>Boseball</h2>
+            </div>
+            <div class="wrapper">
+                <a href="" class="sports8"><img src="Slike/archery.jpg" alt=""></a>
+                <h2>Archery</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
